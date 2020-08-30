@@ -1,8 +1,14 @@
 #!/bin/bash
-#ruta de ctags
+#ctags script
 ctagsFile="$HOME/.ctags/ctags"
 
-#ruta del proyecto
-project="$(pwd)/.git/hooks/"
+#project route
+projectHook="$(pwd)/.git/hooks/"
 
-cp $ctagsFile $project
+echo "-- STAGE 1 --"
+echo "generating script for create tags"
+cp $ctagsFile $projectHook
+echo "success"
+
+#echo "-- STAGE 2 --"
+#chmod u+rw "$(pwd)/.git/tags"
